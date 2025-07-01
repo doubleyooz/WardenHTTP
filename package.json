@@ -1,6 +1,6 @@
 {
   "name": "@doubleyooz/wardenhttp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "helpful consts and functions",
   "main": "src/index.js",
@@ -18,9 +18,29 @@
     "status codes"
   ],
   "author": "doubleyooz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/doubleyooz/WardenHTTP/issues"
+  },
+  "./http-status-codes": {
+    "import": {
+      "types": "./dist/esm/http-status-codes.d.ts",
+      "default": "./dist/esm/http-status-codes.js"
+    },
+    "require": {
+      "types": "./dist/cjs/http-status-codes.d.ts",
+      "default": "./dist/cjs/http-status-codes.js"
+    }
+  },
+  "./http-status-messages": {
+    "import": {
+      "types": "./dist/esm/http-status-messages.d.ts",
+      "default": "./dist/esm/http-status-messages.js"
+    },
+    "require": {
+      "types": "./dist/cjs/http-status-messages.d.ts",
+      "default": "./dist/cjs/http-status-messages.js"
+    }
   },
   "homepage": "https://github.com/doubleyooz/WardenHTTP#readme"
 }
