@@ -1,10 +1,17 @@
 {
   "name": "@doubleyooz/wardenhttp",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "type": "module",
   "description": "helpful consts and functions",
-  "main": "src/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,26 +30,21 @@
     "url": "https://github.com/doubleyooz/WardenHTTP/issues"
   },
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./http-status-codes": {
-      "import": {
-        "types": "./dist/esm/http-status-codes.d.ts",
-        "default": "./dist/esm/http-status-codes.js"
-      },
-      "require": {
-        "types": "./dist/cjs/http-status-codes.d.ts",
-        "default": "./dist/cjs/http-status-codes.js"
-      }
+      "types": "./dist/http-status-codes.d.ts",
+      "default": "./dist/http-status-codes.js"
     },
     "./http-status-messages": {
-      "import": {
-        "types": "./dist/esm/http-status-messages.d.ts",
-        "default": "./dist/esm/http-status-messages.js"
-      },
-      "require": {
-        "types": "./dist/cjs/http-status-messages.d.ts",
-        "default": "./dist/cjs/http-status-messages.js"
-      }
+      "types": "./dist/http-status-messages.d.ts",
+      "default": "./dist/http-status-messages.js"
     }
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
   },
   "homepage": "https://github.com/doubleyooz/WardenHTTP#readme"
 }
