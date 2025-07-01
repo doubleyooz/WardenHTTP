@@ -1,0 +1,26 @@
+{
+  "name": "@doubleyooz/wardenhttp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "helpful consts and functions",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/doubleyooz/WardenHTTP.git"
+  },
+  "keywords": [
+    "const",
+    "response",
+    "http",
+    "status codes"
+  ],
+  "author": "doubleyooz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doubleyooz/WardenHTTP/issues"
+  },
+  "homepage": "https://github.com/doubleyooz/WardenHTTP#readme"
+}
