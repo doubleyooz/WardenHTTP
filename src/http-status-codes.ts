@@ -1,10 +1,7 @@
-// 100: The server has received the request headers and the client should proceed to send the request body.
-export const CONTINUE = 100;
+export const CONTINUE = 100; // 100: The server has received the request headers and the client should proceed to send the request body.
 
-// 101: The requester has asked the server to switch protocols.
-export const SWITCHING_PROTOCOLS = 101;
+export const SWITCHING_PROTOCOLS = 101; // 101: The requester has asked the server to switch protocols.
 
-// 200: The request has succeeded.
 export const OK = 200;
 
 // 201: The request has been fulfilled and resulted in a new resource being created.
@@ -120,3 +117,58 @@ export const GATEWAY_TIMEOUT = 504;
 
 // 505: The server does not support the HTTP protocol version used in the request.
 export const HTTP_VERSION_NOT_SUPPORTED = 505;
+
+export const HttpStatus = {
+  // 1xx Informational
+  CONTINUE, // 100: The server has received the request headers and the client should proceed to send the request body.
+  SWITCHING_PROTOCOLS, // 101: The requester has asked the server to switch protocols.
+
+  // 2xx Success
+  OK,
+  CREATED,
+  ACCEPTED,
+  NON_AUTHORITATIVE_INFORMATION,
+  NO_CONTENT,
+  RESET_CONTENT,
+  PARTIAL_CONTENT,
+
+  // 3xx Redirection
+  MULTIPLE_CHOICES,
+  MOVED_PERMANENTLY,
+  FOUND,
+  SEE_OTHER,
+  NOT_MODIFIED,
+  USE_PROXY,
+  TEMPORARY_REDIRECT,
+
+  // 4xx Client Error
+  BAD_REQUEST,
+  UNAUTHORIZED,
+  PAYMENT_REQUIRED,
+  FORBIDDEN,
+  NOT_FOUND,
+  METHOD_NOT_ALLOWED,
+  NOT_ACCEPTABLE,
+  PROXY_AUTHENTICATION_REQUIRED,
+  REQUEST_TIMEOUT,
+  CONFLICT,
+  GONE,
+  LENGTH_REQUIRED,
+  PRECONDITION_FAILED,
+  REQUEST_ENTITY_TOO_LARGE,
+  REQUEST_URI_TOO_LONG,
+  UNSUPPORTED_MEDIA_TYPE,
+  REQUESTED_RANGE_NOT_SATISFIABLE,
+  EXPECTATION_FAILED,
+  UNPROCESSABLE_ENTITY,
+
+  // 5xx Server Error
+  INTERNAL_SERVER_ERROR,
+  NOT_IMPLEMENTED,
+  BAD_GATEWAY,
+  SERVICE_UNAVAILABLE,
+  GATEWAY_TIMEOUT,
+  HTTP_VERSION_NOT_SUPPORTED,
+} as const;
+
+export type HttpStatusCode = typeof HttpStatus[keyof typeof HttpStatus];
