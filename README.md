@@ -1,7 +1,3 @@
-Here’s a **fancy and professional `README.md`** for your NPM package, themed like an old gatekeeper’s scroll guarding the realms of HTTP status clarity:
-
----
-
 ````markdown
 # 🏰 Warden HTTP
 
@@ -23,9 +19,9 @@ Here’s a **fancy and professional `README.md`** for your NPM package, themed l
 ## 📦 Installation
 
 ```bash
-npm install warden-http
+npm install @doubleyooz/wardenhttp
 # or
-yarn add warden-http
+yarn add @doubleyooz/wardenhttp
 ````
 
 ---
@@ -33,7 +29,7 @@ yarn add warden-http
 ## 🔍 Usage
 
 ```ts
-import { OK, NOT_FOUND } from 'warden-http';
+import { OK, NOT_FOUND } from '@doubleyooz/wardenhttp/http-status-codes';
 
 function handler(req, res) {
   res.status(200).send(OK); // "OK: The request has succeeded."
@@ -56,7 +52,7 @@ All constants follow the `UPPER_SNAKE_CASE` convention and are directly exported
 ### 1. 🧾 Description Strings
 
 ```ts
-import { BAD_REQUEST } from 'warden-http';
+import { BAD_REQUEST } from '@doubleyooz/wardenhttp/http-status-codes';
 
 console.log(BAD_REQUEST);
 // "Bad Request: The server could not understand the request due to invalid syntax."
@@ -65,7 +61,7 @@ console.log(BAD_REQUEST);
 ### 2. 🔢 Numeric Status Codes
 
 ```ts
-import { BAD_REQUEST as BAD_REQUEST_CODE } from 'warden-http/codes';
+import { BAD_REQUEST as BAD_REQUEST_CODE } from '@doubleyooz/wardenhttp/http-status-codes';
 
 console.log(BAD_REQUEST_CODE);
 // 400

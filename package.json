@@ -1,6 +1,6 @@
 {
   "name": "@doubleyooz/wardenhttp",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "type": "module",
   "description": "helpful consts and functions",
   "main": "./dist/index.js",
@@ -44,7 +44,9 @@
     }
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "@types/node": "^25.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
   },
   "homepage": "https://github.com/doubleyooz/WardenHTTP#readme"
 }
