@@ -64,3 +64,79 @@ export const INSUFFICIENT_STORAGE = "Insufficient Storage: The server is unable 
 export const LOOP_DETECTED = "Loop Detected: The server detected an infinite loop while processing the request.";
 export const NOT_EXTENDED = "Not Extended: Further extensions to the request are required for the server to fulfill it.";
 export const NETWORK_AUTHENTICATION_REQUIRED = "Network Authentication Required: The client needs to authenticate to gain network access.";
+
+export const HttpMessages = {
+  // 1xx Informational
+  CONTINUE, // 100: The server has received the request headers and the client should proceed to send the request body.
+  SWITCHING_PROTOCOLS, // 101: The requester has asked the server to switch protocols.
+  PROCESSING,
+  EARLY_HINTS,
+
+  // 2xx Success
+  OK,
+  CREATED,
+  ACCEPTED,
+  NON_AUTHORITATIVE_INFORMATION,
+  NO_CONTENT,
+  RESET_CONTENT,
+  PARTIAL_CONTENT,
+  MULTI_STATUS,
+  ALREADY_REPORTED,
+  IM_USED,
+
+  // 3xx Redirection
+  MULTIPLE_CHOICES,
+  MOVED_PERMANENTLY,
+  FOUND,
+  SEE_OTHER,
+  NOT_MODIFIED,
+  USE_PROXY,
+  TEMPORARY_REDIRECT,
+  PERMANENT_REDIRECT,
+  
+  // 4xx Client Error
+  BAD_REQUEST,
+  UNAUTHORIZED,
+  PAYMENT_REQUIRED,
+  FORBIDDEN,
+  NOT_FOUND,
+  METHOD_NOT_ALLOWED,
+  NOT_ACCEPTABLE,
+  PROXY_AUTHENTICATION_REQUIRED,
+  REQUEST_TIMEOUT,
+  CONFLICT,
+  GONE,
+  LENGTH_REQUIRED,
+  PRECONDITION_FAILED,
+  PAYLOAD_TOO_LARGE,
+  URI_TOO_LONG,
+  UNSUPPORTED_MEDIA_TYPE,
+  RANGE_NOT_SATISFIABLE,
+  EXPECTATION_FAILED,
+  UNPROCESSABLE_ENTITY,
+  IM_A_TEAPOT,
+  MISDIRECTED_REQUEST,
+  LOCKED,
+  FAILED_DEPENDENCY,
+  TOO_EARLY,
+  UPGRADE_REQUIRED,
+  PRECONDITION_REQUIRED,
+  TOO_MANY_REQUESTS,
+  REQUEST_HEADER_FIELDS_TOO_LARGE,
+  UNAVAILABLE_FOR_LEGAL_REASONS,
+
+  // 5xx Server Error
+  INTERNAL_SERVER_ERROR,
+  NOT_IMPLEMENTED,
+  BAD_GATEWAY,
+  SERVICE_UNAVAILABLE,
+  GATEWAY_TIMEOUT,
+  HTTP_VERSION_NOT_SUPPORTED,
+  VARIANT_ALSO_NEGOTIATES,
+  INSUFFICIENT_STORAGE,
+  LOOP_DETECTED,
+  NOT_EXTENDED,
+  NETWORK_AUTHENTICATION_REQUIRED,
+} as const;
+
+export type HttpStatusMessage = typeof HttpMessages[keyof typeof HttpMessages];
